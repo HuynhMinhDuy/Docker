@@ -73,7 +73,7 @@ Run container
                
 Build image 
       :$ docker build -t python-imagename .
-			:$ docker build --tag django_todo:latest .
+      :$ docker build --tag django_todo:latest .
 
 Remove all stopped container 
       :$ docker container prune 
@@ -98,7 +98,7 @@ Get volume info
       :$ docker volume inspect my-vol
       
 Delete all volume 
-	    :$ docker volume rm $(docker volume ls -q)
+      :$ docker volume rm $(docker volume ls -q)
 
 	
 
