@@ -6,7 +6,12 @@ Pull the image
 
 Pull a specific image version 
       :$ docker pull <image-name>:<tag-name>
-
+      :$ docker image pull ubuntu:latest
+      
+Run image :
+      :$ docker container run -it ubuntu:latest /bin/bash
+      :$ docker run -it ubuntu:latest /bin/bash
+      
 Check running container 
       :$ docker container ls 
       :$ docker ps -a 
@@ -54,6 +59,7 @@ Docker Logs
 
 Getting through inside the container 
       :$ docker exec <option> <container-name> <command>
+      :$ docker container exec -it pensive_hamilton pwsh.exe
 
 	For example :$ docker exec -it dev-postgres psql -U postgres
                $ docker exec -it <CONTAINER_NAME> bash
