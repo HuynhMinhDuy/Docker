@@ -1,0 +1,130 @@
+Show all images 
+      :$ docker images
+
+Pull the image 
+      :$ docker pull <image-name>
+
+Pull a specific image version 
+      :$ docker pull <image-name>:<tag-name>
+
+Check running container 
+      :$ docker container ls 
+      :$ docker ps -a 
+      :$ docker container ls -all 
+      
+Start Container 
+      :$ docker container start  <container-name>
+
+Stop the container using 
+      :$ docker container stop <image-name>
+      
+Stop all containers:
+      :$ docker stop $(docker ps -aq)
+
+Create container 
+      :$ docker container create <image-name> 
+      :$ docker container create <image-name>:<tag>
+	
+	 ---> For example :$ docker container create --name test-mongo mongo
+
+Run container with mount port 
+      :$ docker container create --name <container-name> -p <external-port>:<container-port> <image-name>:<tag>
+
+  ---> For example :$ docker container create --name test-mongo -p 8011:27017 mongo
+  
+Remove Container 
+      :$ docker container rm <container-name> 
+      :$ docker rm <container-name>
+
+Remove all containers 
+      :$ docker rm $(docker ps -qa)
+
+Force delete the container by using an argument --force 
+      :$ docker container rm <image-name> --force
+
+Remove Image 
+      :$ docker image rm <imange-name>:<tag>
+      :$ docker rmi 
+
+Remove all images  
+      :$ docker rmi $(docker images -qa)
+
+Docker Logs   
+      :$ docker logs <container-name> -f
+
+Getting through inside the container 
+      :$ docker exec <option> <container-name> <command>
+
+	For example :$ docker exec -it dev-postgres psql -U postgres
+               $ docker exec -it <CONTAINER_NAME> bash
+
+Build Docker image 
+      :$ docker compose -f docker-compose-windows.yml --env-file .env-compose-windows build
+
+Copy file from local host to docker container 
+      :$ docker cp D:\.m2\settings.xml afa3697fcf48:/root/.m2
+
+Run container 
+      :$ docker run --name mongo1 -d mongo -it bash\
+      :$ docker run --name test-mongo -d -e MONGO_INITDB_ROOT_USERNAME=user -e MONGO_INITDB_ROOT_PASSWORD=user -v /root/data:/data/db -p 27117:27017 mongo:5.0.16
+      :$ docker run -d --name my-radius freeradius/freeradius-server
+      :$ docker run --name gateway -p 1812-1813-2083:1812-1813-2083/udp -p 8181:8181 -it free-radius
+      :$ docker compose exec -it freeradius ash
+               
+Build image 
+      :$ docker build -t python-imagename .
+			:$ docker build --tag django_todo:latest .
+
+Remove all stopped container 
+      :$ docker container prune 
+
+Build image 
+      :$ docker build -f .\build\DockerFile -t facebook/testgent . --progress=plain
+      :$ docker build -f Dockerfile-jdk7 . --no-cache
+
+Copy file from comtainer to local 
+      :$ docker cp a71dc76776ef:/etc/raddb/certs/client.p12 d://tmp
+
+Run docker and mount 
+      :$ docker run --name console -v D:/console:/build/console -v D:/web:/build/console/Web -it image-builder:latest bash
+
+Docker compose 
+      :$ docker compose down; docker compose up --build -d; docker compose logs -f
+      
+List volumes :
+      :$ docker volume ls
+      
+Get volume info 
+      :$ docker volume inspect my-vol
+      
+Delete all volume 
+	    :$ docker volume rm $(docker volume ls -q)
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+ 
+
