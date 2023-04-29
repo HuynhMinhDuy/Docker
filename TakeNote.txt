@@ -116,6 +116,8 @@ Delete all volume
  Start deamon service :
      :$ sudo service docker start
 
+Inspect docker container :
+     :$ docker inspect nginx
 	
 
 
