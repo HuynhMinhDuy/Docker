@@ -119,9 +119,19 @@ Delete all volume
 Inspect docker container :
      :$ docker inspect nginx
 	
+Docker with enviroment :
+     :$ docker run -e PASSWORD=admin <image-name>
 
-
-
+CMD vs ENTRYPOINT:
+     CMD command param1
+     CMD ["command", "param1"]
+     	For example : CMD sleep 5
+		      CMD ["sleep", "5"]	
+     
+     ENTRYPOINT ["sleep"]
+     
+     ENTRYPOINT ["sleep"]
+     CMD["5"]
 
 
 
