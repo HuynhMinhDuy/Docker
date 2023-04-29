@@ -9,11 +9,11 @@ Pull the image
 
 Pull a specific image version 
       :$ docker pull <image-name>:<tag-name>
-      :$ docker image pull ubuntu:latest
+      :$ docker pull ubuntu:latest
       
 Run image :
       :$ docker container run -it ubuntu:latest /bin/bash
-      :$ docker run -it ubuntu:latest /bin/bash
+      :$ docker run -d -it ubuntu:latest /bin/bash
       
 Check running container 
       :$ docker container ls 
@@ -23,9 +23,11 @@ Check running container
       
 Start Container 
       :$ docker container start  <container-name>
+      :$ docker start  <container-name>
 
 Stop the container using 
-      :$ docker container stop <image-name>
+      :$ docker container stop <container-name>
+      :$ docker stop <container-name>
       
 Stop all containers:
       :$ docker stop $(docker ps -aq)
@@ -53,7 +55,7 @@ Force delete the container by using an argument --force
 
 Remove Image 
       :$ docker image rm <imange-name>:<tag>
-      :$ docker rmi 
+      :$ docker rmi <imange-name>:<tag>
 
 Remove all images  
       :$ docker rmi $(docker images -qa)
@@ -66,7 +68,8 @@ Getting through inside the container
       :$ docker container exec -it pensive_hamilton pwsh.exe
 
 	For example :$ docker exec -it dev-postgres psql -U postgres
-               $ docker exec -it <CONTAINER_NAME> bash
+               :$ docker exec -it <CONTAINER_NAME> bash
+	       :$ docker exec asd131 cat /etc/*release*
 
 Build Docker image 
       :$ docker compose -f docker-compose-windows.yml --env-file .env-compose-windows build
