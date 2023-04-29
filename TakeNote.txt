@@ -1,3 +1,6 @@
+Show docker version :
+	:$ docker version
+	
 Show all images 
       :$ docker images
 
@@ -16,6 +19,7 @@ Check running container
       :$ docker container ls 
       :$ docker ps -a 
       :$ docker container ls -all 
+      :$ docker run -d --name nginx-container nginx
       
 Start Container 
       :$ docker container start  <container-name>
@@ -105,6 +109,9 @@ Get volume info
       
 Delete all volume 
       :$ docker volume rm $(docker volume ls -q)
+      
+ Start deamon service :
+     :$ sudo service docker start
 
 	
 
