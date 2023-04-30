@@ -133,7 +133,9 @@ CMD vs ENTRYPOINT:
      ENTRYPOINT ["sleep"]
      CMD["5"]
 
-
+Limit CPU and Memory of a container on host :
+     :$ docker run --cpu=0.5 nginx [limit 5%]
+     :$ docker run --momery=100m nginx [limit 100Mb] 
 
 
 
