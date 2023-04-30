@@ -1,0 +1,6 @@
+- Docker engine consist of 3 components : Docker CLI, Docker REST API, Docker deamon
+    1. Docker CLI can local on different host and use command to access another docker engine
+       For example : :$ docker -H=remote-docker-engine:2375
+                     :$ docker -H=10.1.2.3:2375 run nginx   
+- Folder docker :
+    /var/lib/docker
