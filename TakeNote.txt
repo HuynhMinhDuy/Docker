@@ -155,5 +155,8 @@ Delete network :
 
 Create bridge network :
      :$ docker network create --driver bridge  --subnet 182.18.0.0/16 backend-network 
+     
+Create contanier with network :
+     :$ docker run -d --network backend-network --name nginx-container nginx
     
 
