@@ -136,6 +136,22 @@ CMD vs ENTRYPOINT:
 
 Limit CPU and Memory of a container on host :
      :$ docker run --cpu=0.5 nginx [limit 5%]
-     :$ docker run --momery=100m nginx [limit 100Mb] 
+     :$ docker run --momery=100m nginx [limit 100Mb
+ 
+Show docker used space :
+     :$ docker system df -v
+     
+Show all network :
+     :$ docker network ls
+
+Show all bridge network :
+     :$ docker network ls --filter driver=bridge
+     
+Show detail about network :
+     :$ docker network inspect <netwirk-name>
+     
+     
+Create bridge network :
+     :$ docker network create --driver bridge  --subnet 182.18.0.0/16 backend-network 
     
 
