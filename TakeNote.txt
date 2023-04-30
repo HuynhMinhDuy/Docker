@@ -83,6 +83,7 @@ Run container
       :$ docker run -d --name my-radius freeradius/freeradius-server
       :$ docker run --name gateway -p 1812-1813-2083:1812-1813-2083/udp -p 8181:8181 -it free-radius
       :$ docker compose exec -it freeradius ash
+      :$ docker container run -d --name web1 --publish 8080:8080 test:latest
                
 Build image 
       :$ docker build -t python-imagename .
@@ -136,25 +137,5 @@ CMD vs ENTRYPOINT:
 Limit CPU and Memory of a container on host :
      :$ docker run --cpu=0.5 nginx [limit 5%]
      :$ docker run --momery=100m nginx [limit 100Mb] 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
- 
+    
 
