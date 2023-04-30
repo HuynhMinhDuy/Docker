@@ -148,9 +148,11 @@ Show all bridge network :
      :$ docker network ls --filter driver=bridge
      
 Show detail about network :
-     :$ docker network inspect <netwirk-name>
+     :$ docker network inspect <netwirk-name>   
      
-     
+Delete network :
+     :$ docker network rm <network-name>
+
 Create bridge network :
      :$ docker network create --driver bridge  --subnet 182.18.0.0/16 backend-network 
     
