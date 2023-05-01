@@ -6,3 +6,6 @@
     /var/lib/docker
 
 - Docker is client-server architecture
+- Docker deamon can not run on non-linux platforms natively because it uses linux specific kernel feature. 
+- The -i flag starts an interact container
+- The -t flag creates a pseudo-TTY that attaches stdin and stdout
