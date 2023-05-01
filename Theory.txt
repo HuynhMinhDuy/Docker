@@ -4,3 +4,5 @@
                      :$ docker -H=10.1.2.3:2375 run nginx   
 - Folder docker :
     /var/lib/docker
+
+- Docker is client-server architecture
