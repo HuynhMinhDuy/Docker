@@ -160,7 +160,7 @@ Show all bridge network :
      :$ docker network ls --filter driver=bridge
      
 Show detail about network :
-     :$ docker network inspect <netwirk-name>   
+     :$ docker network inspect <network-name>   
      
 Delete network :
      :$ docker network rm <network-name>
@@ -170,5 +170,10 @@ Create bridge network :
      
 Create contanier with network :
      :$ docker run -d --network backend-network --name nginx-container nginx
+     
+Connect container to create new interface network : 
+     :$ docker network connect bridge <container-name>
     
+Disconnect container to network:
+      :$ docker network disconnect bridge <container-name>
 
