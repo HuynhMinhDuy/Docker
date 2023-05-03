@@ -9,3 +9,25 @@
 - Docker deamon can not run on non-linux platforms natively because it uses linux specific kernel feature. 
 - The -i flag starts an interact container
 - The -t flag creates a pseudo-TTY that attaches stdin and stdout
+
+- 4 type of network in docker :
+    * Closed Network / None Network --> Isolated network, can not ping outside the internet
+    * Bridge Network --> By default, bridge network can not ping each other. However, we  can use connect to create a new interface network for docker container
+    * Host Network
+    * Overlay Network
+
+Bridge Network :
+
+    In a bridge network, containers have access to two network interfaces:
+        - A loopback interface
+        - A private interface
+    All containers in the same bridge network can communicate with each other
+    Containers from different bridge networks can not connect with each other by default
+    Reduce the level of network isolation in favor of better outside connectivity
+
+Host Network:
+    Minimum network security level
+    Leave the container widely unprotected
+    But, it has high level performent than bridge network because iptable port mapping
+    
+    NOTE : Dont use it in production, only have valid reasons 
