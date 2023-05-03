@@ -102,9 +102,21 @@ Copy file from comtainer to local
 Run docker and mount 
       :$ docker run --name console -v D:/console:/build/console -v D:/web:/build/console/Web -it image-builder:latest bash
 
-Docker compose 
+Docker compose rebuild all images:
+      :$ docker compose build	
+	
+Docker compose with one command :
       :$ docker compose down; docker compose up --build -d; docker compose logs -f
+
+Start docker compose :
+      :$ docker compose start
+
+Stop docker compose :
+      :$ docker compose stop
       
+Remove Docker compose :
+      :$ docker compose  rm 
+	
 List volumes :
       :$ docker volume ls
       
