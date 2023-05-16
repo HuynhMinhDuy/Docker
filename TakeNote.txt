@@ -14,6 +14,7 @@ Pull a specific image version
 Run image :
       :$ docker container run -it ubuntu:latest /bin/bash
       :$ docker run -d -it ubuntu:latest /bin/bash
+      :$ docker run -it python:3.9-alpine ash
       
 Check running container 
       :$ docker container ls 
