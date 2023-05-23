@@ -14,7 +14,7 @@ Pull a specific image version
 Run image :
       :$ docker container run -it ubuntu:latest /bin/bash
       :$ docker run -d -it ubuntu:latest /bin/bash
-      :$ docker run -it python:3.10 ash
+      :$ docker run -it python:3.9-alpine ash
       :$ docker run -it python:3.10 bash
       :$ docker run --name webserver-container -p 8080:8080 --env-file .env webserver
       
